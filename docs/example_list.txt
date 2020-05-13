@@ -1,0 +1,10 @@
+HUMAN_MITO_S1.breakpoints.txt	HM1
+HUMAN_MITO_S2.breakpoints.txt	HM2
+HUMAN_MITO_S3.breakpoints.txt	HM3
+HUMAN_MITO_S4.breakpoints.txt	HM4
+HUMAN_MITO_S5.breakpoints.txt	HM5
+HUMAN_MITO_S6.breakpoints.txt	HM6
+HUMAN_MITO_S7.breakpoints.txt	HM7
+HUMAN_MITO_S8.breakpoints.txt	HM8
+HUMAN_MITO_S9.breakpoints.txt	HM9
+HUMAN_MITO_S10.breakpoints.txt	HM10
