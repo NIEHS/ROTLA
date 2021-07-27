@@ -4,6 +4,8 @@ import sys
 import os
 import argparse
 import copy
+import gzip
+import re
 
 from subprocess import call
 from collections import defaultdict
@@ -54,9 +56,20 @@ class ROTLA(object):
         return reference.upper()
 
     @staticmethod
+    def flex_open(fq):
+        if re.search("\.fastq\.gz$", fq):
+            handle = gzip.open(fq)
+        elif re.search("\.fastq$", fq):
+            handle = open(fq)
+        else:
+            raise StandardError('Input read files must be in *.fastq or *.fastq.gz format.')
+
+        return handle
+
+    @staticmethod
     def makeFASTA(fastq_file, fasta_file):
         count = 0
-        with open(fastq_file) as fastq, open(fasta_file, "w") as fasta:
+        with ROTLA.flex_open(fastq_file) as fastq, open(fasta_file, "w") as fasta:
             for line in fastq:
                 if count % 4 == 0:
                     fasta.write("> " + line.strip() + "\n")
