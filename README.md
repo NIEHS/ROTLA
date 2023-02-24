@@ -20,13 +20,13 @@ Muliple functions are accessible using ROTLA's command line interface. General u
 ROTLA COMMAND [OPTIONS] [ARGS]...
 ```
 Available commands:
-* [compile_breakpoint_results](#compile_breakpoint_results)
+* [compile-breakpoint-results](#compile-breakpoint-results)
 * [find-breakpoints](#find-breakpoints)
-* [get_aligned_bases](#get_aligned_bases)
+* [get-aligned-bases](#get-aligned-bases)
 
-### compile_breakpoint_results
+### compile-breakpoint-results
 ```
-ROTLA compile_breakpoint_results [OPTIONS] LIST_FILE_NAME OUTPUT_FILE_NAME
+ROTLA compile-breakpoint-results [OPTIONS] LIST_FILE_NAME OUTPUT_FILE_NAME
 ```
 Given a list of breakpoint files, create a composite table containing counts for all observed breakpoints in all files. The input list file must contain two tab-separated columns with no header line. Entries in column 1 should identify the name of a breakpoint file and entries in column 2 should specify the corresponding name to be written to the header line in the output file. See `example_list.txt` in the `docs` folder for an illustration of this format.
 
@@ -62,9 +62,9 @@ Tab-delimited table of breakpoint start coordinates, end coordinates, and counts
 
 Minimum required alignment length, default = 25
 
-### get_aligned_bases
+### get-aligned-bases
 ```
-ROTLA get_aligned_bases [OPTIONS] INPUT_FILE_PREFIX REFERENCE_SEQUENCE
+ROTLA get-aligned-bases [OPTIONS] INPUT_FILE_PREFIX REFERENCE_SEQUENCE
 ```
 Given a pair of PSL files produced using find_breakpoints and the FASTA reference sequence, this command will determine the total count of aligned bases and print this value to an output file named `INPUT_PREFIX`.aligned_bases.txt. To allow aligned base counts of many samples to be easily combined, this output file utlizes a two-column tab-delimited format where the first contains the input file prefix and the second contains the count itself.
 
