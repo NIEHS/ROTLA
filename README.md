@@ -21,7 +21,7 @@ ROTLA COMMAND [OPTIONS] [ARGS]...
 ```
 Available commands:
 * [compile_breakpoint_results](#compile_breakpoint_results)
-* [find_breakpoints](#find_breakpoints)
+* [find-breakpoints](#find-breakpoints)
 * [get_aligned_bases](#get_aligned_bases)
 
 ### compile_breakpoint_results
@@ -30,9 +30,9 @@ ROTLA compile_breakpoint_results [OPTIONS] LIST_FILE_NAME OUTPUT_FILE_NAME
 ```
 Given a list of breakpoint files, create a composite table containing counts for all observed breakpoints in all files. The input list file must contain two tab-separated columns with no header line. Entries in column 1 should identify the name of a breakpoint file and entries in column 2 should specify the corresponding name to be written to the header line in the output file. See `example_list.txt` in the `docs` folder for an illustration of this format.
 
-### find_breakpoints
+### find-breakpoints
 ```
-ROTLA find_breakpoints [OPTIONS] READ_1_FASTQ_FILE READ_2_FASTQ_FILE REFERENCE_SEQUENCE OUTPUT_PREFIX
+ROTLA find-breakpoints [OPTIONS] READ_1_FASTQ_FILE READ_2_FASTQ_FILE REFERENCE_SEQUENCE OUTPUT_PREFIX
 ```
 Given a set of paired-end FASTQ files and FASTA reference sequence, identify breakpoint coordinates and determine count of supporting reads.
 This command will produce the following output files, with each name below preceded by the provided `OUTPUT_PREFIX`:
